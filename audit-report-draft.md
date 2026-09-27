@@ -2,7 +2,7 @@ Here are all silent failure findings, ordered by severity:
 
 ---
 
-## Silent Failure Audit — `app.py`
+## Silent Failure Audit by BOB — `app.py`
 
 ---
 
