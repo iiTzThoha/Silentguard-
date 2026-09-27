@@ -39,6 +39,22 @@ def init_db():
         app.logger.exception("Failed to initialise database")
         raise
 
+@app.route("/", methods=["GET"])
+def home():
+    return jsonify({
+        "app": "SilentGuard — Task Manager API",
+        "status": "running",
+        "note": "Audited and fixed with IBM Bob 2.0",
+        "endpoints": [
+            "GET /tasks",
+            "POST /tasks",
+            "DELETE /tasks/<id>",
+            "POST /tasks/<id>/complete",
+            "POST /tasks/sync",
+            "POST /tasks/import",
+            "POST /tasks/backup"
+        ]
+    })
 
 @app.route("/tasks", methods=["GET"])
 def list_tasks():
